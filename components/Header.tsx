@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import {SocialIcon} from 'react-social-icons'
+import Link from 'next/link'
 type Props = {}
 
 export default function Header({}: Props) {
@@ -36,7 +37,8 @@ export default function Header({}: Props) {
         <SocialIcon url="https://github.com/AbdulMalikAhmed" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
         
       </motion.div>
-
+     
+     <Link href="#contact">
       <motion.div 
       initial={{
         x: 500,
@@ -54,7 +56,8 @@ export default function Header({}: Props) {
         stiffness: 120,
       }}
       
-      className="flex flex-row items-center text-gray-300 cursor-pointer" >
+      className="flex flex-row items-center text-gray-300 cursor-pointer" 
+      >
         <SocialIcon
         className="cursor-pointer"
           fgColor="gray"
@@ -62,9 +65,11 @@ export default function Header({}: Props) {
           network="email"
           />
 
-          <p className="uppercase hidden md:inline-flex text-small text-gray-400 mr-4" >Get in Touch</p>
+          <p className="uppercase hidden md:inline-flex text-small text-gray-400 mr-4" >
+            Get in Touch</p>
 
-      </motion.div>
+     </motion.div>
+    </Link>
 
     </header>
   )
