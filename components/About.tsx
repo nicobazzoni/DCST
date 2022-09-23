@@ -1,11 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import MovingLines from './MovingLines'
 
 type Props = {}
 
 
 export default function About({}: Props) { 
     return (
+        <div className=''>
+
+            
+        
         <motion.div 
         initial={{opacity: 0 }}
         whileInView= {{opacity: 1}}
@@ -16,7 +21,7 @@ export default function About({}: Props) {
           
 
         <h3 className="absolute top-24 uppercaswe tracking-[20px] text-gray-500 text-2xl ">
-            About</h3>
+           <MovingLines/> </h3>
 
             <motion.img 
             initial={{ 
@@ -53,6 +58,6 @@ export default function About({}: Props) {
             
 
         
-        </motion.div>
+        </motion.div> </div>
     )
 }

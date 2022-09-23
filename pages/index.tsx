@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 
 import Header from '../components/Header'
@@ -9,6 +9,21 @@ import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import ContactMe from '../components/ContactMe'
 import Link from 'next/link'
+import { Experience, PageInfo, Project, Skill, Social} from '../typings'
+import { fetchExperiences } from '../utils/fetchExperiences'
+import { fetchSocials } from '../utils/getSocials'
+import { fetchProjects } from '../utils/fetchProject'
+import { fetchSkills } from '../utils/fetchSkills'
+import { fetchPageInfo } from '../utils/fetchPageInfo'
+
+type Props = { 
+    pageInfo: PageInfo,
+    skills: Skill[],
+    projects: Project[],
+    socials: Social[],
+    experiences: Experience[]
+    
+}
 
 const Home: NextPage = () => {
   return (
@@ -72,3 +87,8 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
+
+
+

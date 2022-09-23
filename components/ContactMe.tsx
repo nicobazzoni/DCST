@@ -1,7 +1,7 @@
 import React from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from "react-hook-form";
-
+import { motion } from 'framer-motion'
 
 type Inputs ={
     name: string,
@@ -97,6 +97,7 @@ function ContactMe({}: Props) {
            </form>
 
         </div>
+
     
     
     

@@ -31,7 +31,7 @@ import BackgroundCircles from './BackgroundCircles';
                 </h2>
 
                 <img 
-                className='relative rounded-full  h-32 w-32 mx-auto object-cover' 
+                className='relative rounded-full h-32 w-32 mx-auto object-cover' 
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSFAmPU2pxThTmDahJHsPMb3QskIBcMGMoA&usqp=CAU"
                 
                 />
