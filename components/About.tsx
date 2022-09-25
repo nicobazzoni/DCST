@@ -7,14 +7,13 @@ import { imageConfigDefault } from 'next/dist/shared/lib/image-config'
 
 type Props = { 
     pageInfo: PageInfo;
+   
 }
 
 
 export default function About({ pageInfo }: Props) { 
+    
     return (
-        <div className=''>
-
-            
         
         <motion.div 
         initial={{opacity: 0 }}
@@ -24,17 +23,13 @@ export default function About({ pageInfo }: Props) {
         max-w-7xl px-10 justify-evenly mx-auto items-center"
          >
           
-
-        <h3 className="absolute top-10 uppercase tracking-[20px] text-gray-500 text-2xl ">
+        <h3 className="absolute top-24 mr-24 uppercase tracking-[30px] text-gray-500 text-2xl ">
            <MovingLines/> </h3>
 
             <motion.img 
             initial={{ 
                 x: -200,
                 opacity: 0,
-               
-
-
             }}
              transition={{ 
                 duration: 1.2,
@@ -43,8 +38,9 @@ export default function About({ pageInfo }: Props) {
             viewport={{once: true}} 
             src={urlFor(pageInfo?.profilePic).url() || ''}
              
-            
-            className="-mb-25 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[800px] xl:h-[600px]" 
+             
+            className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
+             md:rounded-lg md:w-64 md:h-95 xl:w-[800px] xl:h-[600px]" 
             />
 
             <div className="space-y-10 px-0 md:px-10">
@@ -54,11 +50,8 @@ export default function About({ pageInfo }: Props) {
                     background
                     </h4>
 
-                    <p className="text-base"> {pageInfo?.backgroundInformation}</p>
+                  <h4 className='text-base'>{pageInfo.backgroundInformation}</h4>
             </div>
-            
-
-        
-        </motion.div> </div>
+        </motion.div> 
     )
 }

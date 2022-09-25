@@ -45,8 +45,8 @@ export default function Header({ socials }: Props) {
           bgColor="transparent" 
           /> 
           ))}
-        <SocialIcon url="https://twitter.com/AbdulMalikAhme1" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
-        <SocialIcon url="https://github.com/AbdulMalikAhmed" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
+
+        <SocialIcon url="https://github.com/nicobazzoni" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
         
         
         

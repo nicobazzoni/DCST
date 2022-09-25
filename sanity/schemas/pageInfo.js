@@ -22,7 +22,7 @@ export default {
       },
     },
     {
-      name: "BackgroundInformation",
+      name: "backgroundInformation",
       title: "BackgroundInformation",
       type: "string",
     },

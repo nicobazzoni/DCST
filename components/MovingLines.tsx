@@ -20,7 +20,7 @@ function MovingLines({}: Props) {
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileHover={{ scale: 1.2 }}
             >
-                Here is a little Background
+                Styled Motion
             </motion.h1>
         </div>
     );

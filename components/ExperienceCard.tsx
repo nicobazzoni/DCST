@@ -15,7 +15,7 @@ export default function ExperienceCard({ experience }: Props) {
        p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
 
         <div>
-            <h1>{experience?.company}</h1> 
+            
         </div>
         <motion.img 
         initial={{ opacity: 0, y: -100 }}
@@ -26,8 +26,7 @@ export default function ExperienceCard({ experience }: Props) {
         src={urlFor(experience?.companyImage).url()} />
 
         <div className="px-0 md:px-10"> 
-            <h4 className="text-4xl font-light">WEIRDO</h4>
-            <p className="font-bold text-2xl mt-1 ">Procrastinator</p>
+            <h4>{experience?.company}</h4> 
 
             <div className="flex space-x-2 my-2">
                 {experience.technologies.map((technology)  => (

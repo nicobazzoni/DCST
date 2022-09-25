@@ -53,13 +53,20 @@ import BackgroundCircles from './BackgroundCircles';
 
                 <div className='space-y-2 space-x-4 justify-center pt-6'>
 
-                    <Link href="about">
+                    <Link href="#about">
                      <button className="heroButton">About</button>
                     </Link>
-                   
+                    <Link href="#experience">
                     <button className="heroButton">Experience</button>
-                    <button className="heroButton">Skills</button>
+                    </Link>
+
+                    <Link href="#skills">
+                    <button className="heroButton">Skills</button> 
+                    </Link>
+
+                    <Link href="#projects">
                     <button className="heroButton">Projects</button>
+                    </Link>
                 </div>
                 </div>
             </div>
