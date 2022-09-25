@@ -28,7 +28,7 @@ type Props = {
 const Home = ({ pageInfo, experiences, projects, skills,  socials }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
-    overflow-y-scroll overflow-x-hidden z-0" >
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-gray-800" >
       <Head>
         <title>Portfolio</title>
        </Head>
@@ -71,9 +71,9 @@ const Home = ({ pageInfo, experiences, projects, skills,  socials }: Props) => {
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div>
             <img 
-            src="https://i.imgur.com/e2yvD6A.png" 
+            src="https://www.nicocode.com/static/media/nico.53613d44766f69913468.png" 
             alt="logo" 
-            className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
+            className="h-10 w-10 ml-2 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
           </div>
 
         </footer>
