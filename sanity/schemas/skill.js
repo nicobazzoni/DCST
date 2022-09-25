@@ -4,10 +4,10 @@ export default {
     type: 'document',
     fields: [
       {
-        name: 'title',
-        title: 'Title',
+        name: "title",
+        title: "Title",
         description: "Title of the skill",
-        type: 'string',
+        type: "string",
       },
       {
         name: "progress",
@@ -19,7 +19,7 @@ export default {
       {
         name: "image",
         title: "Image",
-        type: 'image',
+        type:"image",
         options: {
           hotspot: true,
         },

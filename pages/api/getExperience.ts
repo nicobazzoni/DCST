@@ -1,13 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { sanityClient } from '../../sanity'
-import { PageInfo } from '../../typings'
+
 import { groq } from 'next-sanity'
-import { Experience} from '../../typings'
+import { Experience } from '../../typings'
 
 
 const query = groq`
-*[_type == "experience"] 
-`
+*[_type == "experience"] {
+ ...,
+technologies[]->
+}
+`;
 
 type Data = {
     experiences: Experience[]

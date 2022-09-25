@@ -4,15 +4,13 @@ import { groq} from 'next-sanity'
 import {Social} from '../../typings'
 
 const query = groq`
-*[_type == "socials"]
+   *[_type == "social"]
 `
+
 
 type Data = {
     socials: Social[] 
-
-    
-
-}
+ }
 
 export default async function handler(
     req: NextApiRequest,

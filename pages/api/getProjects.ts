@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { sanityClient } from '../../sanity'
-import { PageInfo } from '../../typings'
+
 import { groq } from 'next-sanity'
-import { Project} from '../../typings'
+import { Project } from '../../typings'
 
 
 const query = groq`
-*[_type == "projects"] {
+*[_type == "project"] {
 ...,
 technologies[]->
 }

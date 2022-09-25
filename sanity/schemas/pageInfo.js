@@ -14,7 +14,7 @@ export default {
       type: "string",
     },
     {
-      name: "HeroImage",
+      name: "heroImage",
       title: "Image",
       type: 'image',
       options: {

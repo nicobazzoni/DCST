@@ -1,11 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import MovingLines from './MovingLines'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
+import { imageConfigDefault } from 'next/dist/shared/lib/image-config'
 
-type Props = {}
+type Props = { 
+    pageInfo: PageInfo;
+}
 
 
-export default function About({}: Props) { 
+export default function About({ pageInfo }: Props) { 
     return (
         <div className=''>
 
@@ -20,7 +25,7 @@ export default function About({}: Props) {
          >
           
 
-        <h3 className="absolute top-24 uppercaswe tracking-[20px] text-gray-500 text-2xl ">
+        <h3 className="absolute top-10 uppercase tracking-[20px] text-gray-500 text-2xl ">
            <MovingLines/> </h3>
 
             <motion.img 
@@ -35,11 +40,11 @@ export default function About({}: Props) {
                 duration: 1.2,
              }}
             whileInView={{ x: 0, opacity: 1, }}
-            viewport={{once: true}}
+            viewport={{once: true}} 
+            src={urlFor(pageInfo?.profilePic).url() || ''}
+             
             
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSFAmPU2pxThTmDahJHsPMb3QskIBcMGMoA&usqp=CAU"
-            className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover 
-            md:rounded-lg md:w-64 md:h-95 xl:w-[800px] xl:h-[600px]" 
+            className="-mb-25 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[800px] xl:h-[600px]" 
             />
 
             <div className="space-y-10 px-0 md:px-10">
@@ -49,11 +54,7 @@ export default function About({}: Props) {
                     background
                     </h4>
 
-                    <p className="text-base"> WhateverWhateverWhateverWhateverWhateverWhatever
-                    WhateverWhateverWhateverWhateverWhateverWhateverWhatever
-                    WhateverWhateverWhateverWhateverWhateverWhateverWhatever
-                    WhateverWhateverWhateverWhateverWhateverWhatever
-                    WhateverWhateverWhateverWhateverWhateverWhateverWhatever </p>
+                    <p className="text-base"> {pageInfo?.backgroundInformation}</p>
             </div>
             
 
