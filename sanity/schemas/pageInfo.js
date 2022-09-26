@@ -1,12 +1,12 @@
 export default {
   name: 'pageInfo',
-  title: 'pageInfo',
-  type: 'document',
+  title: 'PageInfo',
+  type: "document",
   fields: [
     {
       name: 'name',
       title: 'Name',
-      type: 'string',
+      type: "string",
     },
     {
       name: "role",
@@ -16,7 +16,7 @@ export default {
     {
       name: "heroImage",
       title: "Image",
-      type: 'image',
+      type: "image",
       options: {
         hotspot: true,
       },
@@ -29,7 +29,7 @@ export default {
     {
       name: "profilePic",
       title: "ProfilePic",
-      type: 'image',
+      type: "image",
       options: { 
         hotspot: true,
       },

@@ -11,9 +11,9 @@ type Props = {
 function Projects({ projects}: Props) {
    
   return <motion.div 
-    initial={{ opacity: 0, x: -500 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 1.5, type: 'spring', stiffness: 120 }}
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1, }}
+    transition={{ duration: 1.5}}
     
 
   
@@ -25,14 +25,18 @@ function Projects({ projects}: Props) {
     </h3>
 
     
-        <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+        <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20
+         scrollbar-thumb-[#7091c2]/80">
         {projects?.map((project, i) => (
-            <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
+            <div  
+            key={project._id}
+            
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
             items-center justify-center p-20 md:p-44 h-screen"> 
                 <motion.img 
                 initial={{ opacity: 0, y: -300 }}
                
-                transition={{ duration: 1.5, type: 'spring', stiffness: 120 }}
+                transition={{ duration: 1.2, }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{once:true}}
 

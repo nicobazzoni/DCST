@@ -23,14 +23,14 @@ function Skill({  skill, directionLeft }: Props) {
          
        <motion.img 
         initial={{
-        x: directionLeft ? -200 : 200,
+        x: directionLeft ? -100 : 100,
         opacity: 0,
      }} 
 
-     transition={{duration: 1}}
+     transition={{duration: 1, type: 'spring', stiffness: 100, delay: 0.5}}
      whileInView={{ opacity: 1, x: 0}}
      src={ urlFor(skill?.image).url() }
-        className="rounded-full border border-gray-500 object-cover w-24 h-24 xl:w-32 
+        className="rounded-full border border-gray-500 md:object-cover md:w-24 md:h-24 xl:w-32 
         xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
      
     

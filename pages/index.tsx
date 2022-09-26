@@ -1,4 +1,5 @@
 import type { GetStaticProps } from 'next'
+
 import Head from 'next/head'
 
 import Header from '../components/Header'
@@ -25,12 +26,12 @@ type Props = {
     
 }
 
-const Home = ({ pageInfo, experiences, projects, skills,  socials }: Props) => {
+const Home = ({ pageInfo, skills, projects, socials, experiences  }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-gray-800" >
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#7091c2]/80" >
       <Head>
-        <title>Portfolio</title>
+        <title>{pageInfo?.name}</title>
        </Head>
 
       <Header socials={socials} />
@@ -86,7 +87,7 @@ const Home = ({ pageInfo, experiences, projects, skills,  socials }: Props) => {
 export default Home
 
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps= async () => {
   const pageInfo = await fetchPageInfo()
   const socials = await fetchSocials()
   const skills = await fetchSkills()
@@ -102,6 +103,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       experiences,
     },
-  }
-}
+  };
+}; 
 

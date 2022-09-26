@@ -23,7 +23,7 @@ export default function About({ pageInfo }: Props) {
         max-w-7xl px-10 justify-evenly mx-auto items-center"
          >
           
-        <h3 className="absolute top-24 mr-24 uppercase tracking-[30px] text-gray-500 text-2xl ">
+        <h3 className="absolute top-24 mr-20 uppercase tracking-[30px] text-gray-500 text-1xl ">
            <MovingLines/> </h3>
 
             <motion.img 
@@ -37,8 +37,6 @@ export default function About({ pageInfo }: Props) {
             whileInView={{ x: 0, opacity: 1, }}
             viewport={{once: true}} 
             src={urlFor(pageInfo?.profilePic).url() || ''}
-             
-             
             className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
              md:rounded-lg md:w-64 md:h-95 xl:w-[800px] xl:h-[600px]" 
             />
