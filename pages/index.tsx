@@ -2,6 +2,8 @@ import type { GetStaticProps } from 'next'
 
 import Head from 'next/head'
 
+import Circles from '../components/Circles'
+
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
@@ -16,6 +18,7 @@ import { fetchSocials } from '../utils/fetchSocials'
 import { fetchProjects } from '../utils/fetchProject'
 import { fetchSkills } from '../utils/fetchSkills'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
+import Shape from '../components/Shape'
 
 type Props = { 
     pageInfo: PageInfo,
@@ -44,14 +47,19 @@ const Home = ({ pageInfo, skills, projects, socials, experiences  }: Props) => {
 
       
        <section id='about' className='snap-start'>
-         <About pageInfo={pageInfo}/>
+       
+         <About pageInfo={pageInfo} /> 
+         
        </section>
+       
 
        
         <section id='experience' className='snap-start'>
           <WorkExperience experiences= {experiences}/>
 
         </section>
+        <br>
+        </br>
 
        
 
@@ -64,7 +72,8 @@ const Home = ({ pageInfo, skills, projects, socials, experiences  }: Props) => {
           <Projects projects = {projects} />
          </section>
 
-       <section id="contact" className="snap-start">
+       <section id="contact" className="snap-start" >
+       
         <ContactMe />
         </section>
 
@@ -91,7 +100,6 @@ export const getStaticProps: GetStaticProps= async () => {
   const pageInfo = await fetchPageInfo()
   const socials = await fetchSocials()
   const skills = await fetchSkills()
- 
   const projects = await fetchProjects()
   const experiences = await fetchExperiences()
 

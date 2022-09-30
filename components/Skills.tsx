@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { SocialIcon } from 'react-social-icons';
 import Skill from './Skill';
 import { Skill as SkillType } from '../typings';
-import { Shape } from './Shape';
+import  Circles  from './Circles';
 
 type Props = { 
     skills: SkillType[];
@@ -13,13 +13,14 @@ type Props = {
 
 function Skills( { skills }: Props) {
     return (
+     
         <div 
-        // initial={{ opacity: 0, }}
-        // whileInView={{ opacity: 1, }}
-        // transition={{ duration: 1, }}
+        
         className="flex relative flex-col text-center md:text-left md:flex xl:flex-row 
         max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center ">
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+
+            
+            <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Skills
             </h3>
 
@@ -37,12 +38,15 @@ function Skills( { skills }: Props) {
                ))}
 
 
-            </div>
+            </div> 
+            <div className=''>
 
+           
+             </div>
             
         </div>
 
     )
 }
-<Shape />
+
 export default Skills

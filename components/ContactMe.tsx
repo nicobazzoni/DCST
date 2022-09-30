@@ -2,7 +2,7 @@ import React from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from 'framer-motion'
-
+import Shape from './Shape';
 type Inputs ={
     name: string,
     email: string,
@@ -17,26 +17,31 @@ function ContactMe({}: Props) {
     const { handleSubmit, register } = useForm<Inputs>();
     
     const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        window.location.href =`mailto:nicobazzoni@gmail?subject=${formData.subject}&
+        window.location.href =`mailto:nicobazzoni@gmail.com?subject=${formData.subject}&
         body=Hi, my name is ${formData.name}. ${formData.message} 
         (${formData.email})`; 
     };
-  return (
-    <div className="h-screen flex relative flex-col text-center overflow-x-scroll 
-    md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center object-contain md:object-scale-down">
+  return ( 
+  
+  
         
-        <h3 className="absolute top-1 uppercase tracking-[20px] text-gray-500 text-2xl">
+   
+    <div className="h-screen flex flex-col text-center overflow-x-scroll 
+    md:text-left md:flex-row max-w-10xl px-10 justify-evenly mx-auto items-center object-contain md:object-scale-down  ">
+        
+        <h3 className="absolute top-1 md:top-52 uppercase tracking-[20px] text-gray-500 text-2xl">
             Contact
 
         </h3>
 
-        <div className="flex flex-col space-y-10">
+        <div className="flex flex-col space-y-10  ">
             <h4 className="text-4xl font-semibold mt-12 mb-1 text-center">
-                I have the solutions.
+                Let's Work.
             </h4>
             
-       
-
+            <div className='items-center'>
+     
+           </div>
         <div className="space-y-10">
             <div className="flex items-center space-x-5 justify-center">
                 
@@ -61,7 +66,7 @@ function ContactMe({}: Props) {
             
            </div>  
 
-           <form className="flex flex-col space-y-2 w-screen md:w-fit p-2 mx-auto" 
+           <form className="flex flex-col relative space-y-2 w-screen md:w-fit p-2 mx-auto" 
             onSubmit={handleSubmit(onSubmit)} >
             
             
@@ -83,7 +88,7 @@ function ContactMe({}: Props) {
             type="text" 
             />
             
-            <textarea {...register('message')} 
+            <textarea {...register('message')}  
             placeholder="Message" 
             className='contactInput'
             />
@@ -91,7 +96,7 @@ function ContactMe({}: Props) {
             
             <button 
             type="submit" 
-            className="bg-[#F7AB0A] py-5 px-10 rounded-full text-black font-bold
+            className="bg-[#29262a] hover:bg-[#25d7ff] py-5 px-10 rounded-full text-black font-bold
             text-lg "
             >
                 Submit
@@ -101,7 +106,11 @@ function ContactMe({}: Props) {
            </form>
 
         </div>
+
+        
+        
      </div>
+     
   )
 }
 

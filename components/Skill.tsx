@@ -13,12 +13,8 @@ function Skill({  skill, directionLeft }: Props) {
             
           
        
-        <div className="group relative flex cursor-pointer " > 
-        {/* <motion.div>
-        <h1 className="text-2xl font-bold text-white-500 absolute left-1/2 transform -translate-x-10 -translate-y-10 ">
-            {skill?.title}
-        </h1>
-        </motion.div> */}
+        <div className="group relative flex cursor-pointer items-center " > 
+       
             
          
        <motion.img 

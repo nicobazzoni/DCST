@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 import { Cursor, useTypewriter}   from 'react-simple-typewriter';
@@ -32,10 +33,16 @@ import BackgroundCircles from './BackgroundCircles';
             <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
                     Nico Bazzoni
                 </h2>
-                <img className="relative rounded-full h-32 w-32 mx-auto object-cover"
+                <motion.div 
+                animate={{
+                    scale: [1, 2, 2, 1, 1],
+                    rotate: [0, 0, 270, 270, 0],
+                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                  }}>
+                <img className="relative rounded-full h-32 w-32 mx-auto object-cover "
                     src={urlFor(pageInfo?.heroImage).url() || '/images/profile.jpg'}
                     />
-                    
+                </motion.div>
 
                 
 
@@ -51,24 +58,79 @@ import BackgroundCircles from './BackgroundCircles';
                 <span className='mr-3'>{text}</span>
                 </h1>
 
+                <motion.div 
+                 animate={{
+                    scale: [1, 2, 2, 1, 1],
+                    borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                  }}>
+
+                 
+
                 <div className='space-y-2 space-x-4 justify-center pt-6'>
 
+                    
+
                     <Link href="#about">
-                     <button className="heroButton">About</button>
+                    <motion.button 
+                    
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+
+                    animate={{
+                        type: 'spring',
+                    }}
+
+                    
+                    className="heroButton">About</motion.button>
                     </Link>
                     <Link href="#experience">
-                    <button className="heroButton">Experience</button>
+                    <motion.button 
+                    
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+
+                    animate={{
+                        type: 'spring',
+                    }}
+
+                    
+                    className="heroButton">Experience</motion.button>
                     </Link>
 
                     <Link href="#skills">
-                    <button className="heroButton">Skills</button> 
+                    <motion.button 
+                    
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+
+                    animate={{
+                        type: 'spring',
+                    }}
+
+                    
+                    className="heroButton">Skills</motion.button>
                     </Link>
 
                     <Link href="#projects">
-                    <button className="heroButton">Projects</button>
+                    <motion.button 
+                    
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+
+                    animate={{
+                        type: 'spring',
+                    }}
+
+                    
+                    className="heroButton">Projects</motion.button>
                     </Link>
+                    
+                </div></motion.div>
                 </div>
-                </div>
-            </div>
+            </div> 
         );
     }
