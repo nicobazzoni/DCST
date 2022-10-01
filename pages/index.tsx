@@ -1,5 +1,6 @@
 import type { GetStaticProps } from 'next'
 
+
 import Head from 'next/head'
 
 import Circles from '../components/Circles'
@@ -18,7 +19,7 @@ import { fetchSocials } from '../utils/fetchSocials'
 import { fetchProjects } from '../utils/fetchProject'
 import { fetchSkills } from '../utils/fetchSkills'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
-import Shape from '../components/Shape'
+
 
 type Props = { 
     pageInfo: PageInfo,
@@ -96,7 +97,7 @@ const Home = ({ pageInfo, skills, projects, socials, experiences  }: Props) => {
 export default Home
 
 
-export const getStaticProps: GetStaticProps= async () => {
+export async function getStaticProps()  {
   const pageInfo = await fetchPageInfo()
   const socials = await fetchSocials()
   const skills = await fetchSkills()
