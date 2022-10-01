@@ -30,7 +30,7 @@ function ContactMe({}: Props) {
 
         <div className="z-20 flex flex-col space-y-10 rounded-md  bg-[#020202] opacity-80 ">
             <h4 className="text-4xl font-semibold mt-12 mb-1 text-center ">
-                Let's Work.
+                The Work.
             </h4>
             
             <div className='items-center'>

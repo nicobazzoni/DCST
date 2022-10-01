@@ -83,7 +83,7 @@ const Home = ({ pageInfo, skills, projects, socials, experiences  }: Props) => {
             <img 
             src="https://www.nicocode.com/static/media/nico.53613d44766f69913468.png" 
             alt="logo" 
-            className="h-10 w-10 ml-2 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
+            className="h-10 w-10 md:h-20 md:w-20 ml-2 rounded-full filter grayscale hover:grayscale-0 cursor-pointer" />
           </div>
 
         </footer>
