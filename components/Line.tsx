@@ -14,6 +14,9 @@ function Line({}: Props) {
             scale: [1,2,2,3],
             opacity: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
             borderRadius: ["20%", "20%", "50%", "50%", "20%", "10%"],
+            
+            
+            
 
         }}
         transition={{
@@ -21,10 +24,11 @@ function Line({}: Props) {
             repeat: Infinity,
         }}
 
-         className="relative flex justify-center items-center xl:w-full " >
+         className="relative flex justify-center items-center  " >
             
         
-              <div className='box border w-screen h-0 animate-ping'> </div>
+             
+              <div className='box border bg-gradient-to-r from-indigo-600 to-blue-500 text-white w-screen h-0 mt-50 animate-bounce'> </div>
           
            
             

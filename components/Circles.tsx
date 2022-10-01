@@ -8,7 +8,7 @@ function Circles({}: Props) {
         <div className='overflow-visible'>
         <motion.div 
         whileTap={{ scale: 2.1 }}
-        whileDrag={{ scale: 1.1 }}
+        whileDrag={{ scale: 2.1,  }}
         drag="x"
         dragConstraints={{ left: -100, right: 100, top: 800, bottom: 200 }}
         initial={{ 

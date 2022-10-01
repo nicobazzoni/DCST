@@ -23,13 +23,13 @@ function ContactMe({}: Props) {
     };
   return ( 
   
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center opacity-90 overflow-hidden">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center bg-black overflow-hidden">
         <Shape />
         
     
 
-        <div className="z-20 flex flex-col space-y-10  ">
-            <h4 className="text-4xl font-semibold mt-12 mb-1 text-center">
+        <div className="z-20 flex flex-col space-y-10 rounded-md  bg-[#020202] opacity-80 ">
+            <h4 className="text-4xl font-semibold mt-12 mb-1 text-center ">
                 Let's Work.
             </h4>
             
@@ -60,7 +60,7 @@ function ContactMe({}: Props) {
             
            </div>  
 
-           <form className="flex flex-col space-y-2 w-fit  mx-auto" 
+           <form className="flex flex-col space-y-2 w-fit  mx-auto md:w-[800px]" 
             onSubmit={handleSubmit(onSubmit)} >
             
             

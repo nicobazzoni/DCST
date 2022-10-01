@@ -21,7 +21,7 @@ function Skills( { skills }: Props) {
         className="flex relative flex-col text-center md:text-left md:flex xl:flex-row 
         max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center ">
            
-
+            
             
             <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Skills
@@ -31,7 +31,7 @@ function Skills( { skills }: Props) {
                  hover 
             </h3>
 
-            <div className="grid grid-cols-2 md:w-fit p-24 gap-5 ">
+            <div className="grid grid-cols-2 md:w-fit p-24 gap-5 z-20 ">
                {skills?.slice(0, skills.length / 2).map((skill) => (
                 <Skill key={skill._id} skill={skill} />
                ))}
@@ -39,16 +39,16 @@ function Skills( { skills }: Props) {
                 {skills?.slice(skills.length / 2, skills.length).map((skill) => (
                 <Skill key={skill._id} skill={skill} directionLeft />
                ))}
-
-
+                 
+              
             </div> 
            
 
-           
- 
+
             
         </div>
-       
+                  
+ 
     )
 }
 
