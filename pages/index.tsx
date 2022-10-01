@@ -113,5 +113,7 @@ export async function getStaticProps()  {
       experiences,
     },
   };
+
+  return { paths, fallback: false }
 }; 
 
