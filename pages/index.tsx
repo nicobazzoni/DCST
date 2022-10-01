@@ -112,8 +112,10 @@ export async function getStaticProps()  {
       projects,
       experiences,
     },
+    fallback: false
   };
 
-  return { paths, fallback: false }
+  
+
 }; 
 
