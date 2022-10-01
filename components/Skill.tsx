@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Skill } from '../typings';
 import { urlFor } from '../sanity';
+import Line from './Line';
 
 type Props = { 
     skill: Skill
@@ -11,13 +12,15 @@ type Props = {
 function Skill({  skill, directionLeft }: Props) {
         return ( 
             
-          
+         
        
-        <div className="group relative flex cursor-pointer items-center " > 
-       
+        <div className="group relative flex cursor-pointer items-center  " > 
+        
+     
             
          
        <motion.img 
+      
         initial={{
         x: directionLeft ? -100 : 100,
         opacity: 0,

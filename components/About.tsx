@@ -15,7 +15,7 @@ type Props = {
 export default function About({ pageInfo }: Props) { 
     
     return (
-        <div className='position-absolute'>
+        <div className='z-20'>
         
         <motion.div 
         initial={{opacity: 0 }}
@@ -23,17 +23,17 @@ export default function About({ pageInfo }: Props) {
        
         transition={{duration: 1}}
         className=" md:hover:opacity-100  flex flex-col h-screen text-center md:text-left md:flex-row 
-        max-w-7xl px-10 justify-evenly mx-auto items-center opacity-50 z-0"> 
+        max-w-7xl px-10 justify-evenly mx-auto items-center z-0 overflow-x-visible"> 
          
          
           
         <h3 className="relative mr-20 top-2 uppercase tracking-[30px] text-gray-500 text-1xl ">
            <MovingLines/> </h3>
             
- {/* <div className="abc">
+ 
             <Circles/>
 
-           </div> */}
+           
         
 
 

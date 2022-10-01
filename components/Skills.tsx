@@ -6,6 +6,7 @@ import { SocialIcon } from 'react-social-icons';
 import Skill from './Skill';
 import { Skill as SkillType } from '../typings';
 import  Circles  from './Circles';
+import Line from './Line';
 
 type Props = { 
     skills: SkillType[];
@@ -13,11 +14,13 @@ type Props = {
 
 function Skills( { skills }: Props) {
     return (
-     
+       
+      
         <div 
         
         className="flex relative flex-col text-center md:text-left md:flex xl:flex-row 
         max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center ">
+           
 
             
             <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
@@ -39,13 +42,13 @@ function Skills( { skills }: Props) {
 
 
             </div> 
-            <div className=''>
+           
 
            
-             </div>
+ 
             
         </div>
-
+       
     )
 }
 

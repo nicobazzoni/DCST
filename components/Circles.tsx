@@ -5,21 +5,21 @@ type Props = {}
 
 function Circles({}: Props) {
     return (
-        <div className='absolute'>
+        <div className='overflow-visible'>
         <motion.div 
         whileTap={{ scale: 2.1 }}
-        whileDrag={{ scale: 2.1 }}
+        whileDrag={{ scale: 1.1 }}
         drag="x"
         dragConstraints={{ left: -100, right: 100, top: 800, bottom: 200 }}
         initial={{ 
-            x: -200,
+            x: 0,
             opacity: 1,
         }}
         
        
 
         whileInView={{
-            opacity: 1,
+            opacity: 0.5,
             
         }}
 
@@ -35,7 +35,7 @@ function Circles({}: Props) {
 
         }}
 
-         className="flex justify-center items-center" >
+         className="relative flex justify-center items-center" >
            
           
             <div className="rounded-full bg-gradient-to-r from-indigo-600 to-white text-white px-2 ... border border-[#333333] h-[900px] w-[900px] absolute mb-2 right-3 opacity-30 animate-pulse " />

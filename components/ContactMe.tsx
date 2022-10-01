@@ -23,18 +23,12 @@ function ContactMe({}: Props) {
     };
   return ( 
   
-  
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center opacity-90 overflow-hidden">
+        <Shape />
         
-   
-    <div className="h-screen flex flex-col text-center overflow-x-scroll 
-    md:text-left md:flex-row max-w-10xl px-10 justify-evenly mx-auto items-center object-contain md:object-scale-down  ">
-        
-        <h3 className="absolute top-1 md:top-52 uppercase tracking-[20px] text-gray-500 text-2xl">
-            Contact
+    
 
-        </h3>
-
-        <div className="flex flex-col space-y-10  ">
+        <div className="z-20 flex flex-col space-y-10  ">
             <h4 className="text-4xl font-semibold mt-12 mb-1 text-center">
                 Let's Work.
             </h4>
@@ -66,7 +60,7 @@ function ContactMe({}: Props) {
             
            </div>  
 
-           <form className="flex flex-col relative space-y-2 w-screen md:w-fit p-2 mx-auto" 
+           <form className="flex flex-col space-y-2 w-fit  mx-auto" 
             onSubmit={handleSubmit(onSubmit)} >
             
             
