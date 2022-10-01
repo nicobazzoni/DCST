@@ -22,7 +22,7 @@ import { fetchPageInfo } from '../utils/fetchPageInfo'
 
 
 type Props = { 
-    pageInfo: PageInfo,
+    pageInfo: PageInfo[],
     skills: Skill[];
     projects: Project[];
     socials: Social[];
