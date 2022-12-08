@@ -14,33 +14,14 @@ import BackgroundCircles from './BackgroundCircles';
         const x = useSpring(0)
 
 
-            
-        const [text, count] = useTypewriter({
-           
-            words: [
-                `Hi, The Name's ${pageInfo?.name}`,
-                'I am a Front End Developer',
-                'I am a Back End Developer',
-                'I am a Web Developer',
-                'I am a Software Developer',
-
-            ],
-            loop: true,
-            delaySpeed: 2000,
-            typeSpeed: 100, 
-            deleteSpeed: 100,
-            
-            
-            
-
-        })
-
 
         return (
             <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
+
+              
                 <BackgroundCircles />
             <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-                    Nico Bazzoni
+                    Davey Cakes <br></br> & <br></br> the Snuggle Thugs
                 </h2>
                 <motion.div 
                 
@@ -65,11 +46,11 @@ import BackgroundCircles from './BackgroundCircles';
                <div className='z-20'>
 
                 <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] hover:animate-ping">
-                   {pageInfo?.role}
+                 
                 </h2>
 
                 <h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10 hover:animate-ping">
-                <span className='mr-3'>{text}</span>
+               
                 </h1>
 
                 <motion.div 
@@ -113,7 +94,7 @@ import BackgroundCircles from './BackgroundCircles';
                     className="heroButton">Experience</motion.button>
                     </Link>
 
-                    <Link href="#skills">
+                    <Link href="#projects">
                     <motion.button 
                     
 
@@ -125,7 +106,7 @@ import BackgroundCircles from './BackgroundCircles';
                     }}
 
                     
-                    className="heroButton">Skills</motion.button>
+                    className="heroButton">Tribute</motion.button>
                     </Link>
 
                     <Link href="#projects">
@@ -141,6 +122,21 @@ import BackgroundCircles from './BackgroundCircles';
 
                     
                     className="heroButton">Projects</motion.button>
+                    </Link>
+
+                    <Link href="#music">
+                    <motion.button 
+                    
+
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+
+                    animate={{
+                        type: 'spring',
+                    }}
+
+                    
+                    className="heroButton">music</motion.button>
                     </Link>
                     
                 </div></motion.div>

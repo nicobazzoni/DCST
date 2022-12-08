@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply  px-6 py-2 space-y-4 text-lg font-semibold md:flex-col rounded-full shadow-md text-white tracking-widest space-x-2  bg-black hover:bg-gradient-to-r from-red-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    @apply  px-6 py-2 space-y-4 text-lg font-semibold md:flex-col rounded-full shadow-md text-white tracking-widest space-x-2  bg-black hover:bg-gradient-to-r from-slate-800 to-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
   }
 }
 
@@ -23,3 +23,78 @@
     height:100%;
     width:100%;
 }
+
+.player_container
+{
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    position: center;
+}
+
+    .title{
+        font-size: 1.5rem;
+        font-weight: 600;
+        position: center;
+    }
+
+    .title{
+        font-size: inherit;
+        position: center;
+
+    }
+    .navigation{
+        width: 100%;
+    }
+
+
+        .navigation_wrapper
+        {
+            min-width: 100%;
+            background-color: rgba(119, 119, 119, 0.781);
+            height: 50px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+            
+            .seek_bar{
+                width: 0;
+                height: 100%;
+                background-color: rgb(124, 0, 0);
+                border-radius: 100px;
+                border-color: "white";
+               animation: 0.5s linear infinite;
+            }
+
+        
+    
+    .controls{
+        font-size: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+        .btn_action
+        {
+            font-size: 2rem;
+            margin: 0 1rem;
+            cursor: pointer;
+        }
+
+        
+        
+        
+        .pp
+        {
+            font-size: 4rem;
+            
+        }
+        
+    

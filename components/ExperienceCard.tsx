@@ -10,9 +10,9 @@ type Props = {
 
 export default function ExperienceCard({ experience }: Props) {
     return (
-       <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 
-       w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-transparent
-       p-10 md:hover:opacity-100 md:opacity-90 cursor-pointer  transition-opacity duration-200">
+       <article className="flex flex-col rounded-lg items-center space-y-1 flex-shrink-0 
+       w-[500px] md:h-[700px] md:w-[600px] xl:w-[900px] snap-center bg-transparent
+        md:hover:opacity-100 md:opacity-90 cursor-pointer overflow-hidden  transition-opacity duration-200">
 
         <div>
             
@@ -22,7 +22,7 @@ export default function ExperienceCard({ experience }: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{once:true}}
         transition={{ duration: 1.2,  stiffness: 120 }}
-        className="w-64 h-32 rounded-full xl:w-[500px] xl:h-[800px] object-cover object-center "
+        className="w-64 h-32 rounded-full xl:w-[500px] xl:h-[800px] object-cover object-center  "
         src={urlFor(experience?.companyImage).url()} />
 
         <div className="px-0 md:px-10  text-center"> 

@@ -26,8 +26,8 @@ function BackgroundCircles({}: Props) {
             animate-ping" />
             <div className="rounded-full bg-[#0d0c0c] h-[300px] w-[300px] absolute mt-52 " />
             <div className="rounded-full  bg[#333333] h-[300px] w-[300px] absolute mt-52 " />
-            <div className="rounded-full  bg-[#891414] opacity-80  h-[650px] w-[650px] absolute mt-52 animate-ping" />
-            <div className="rounded-full  bg-[#18191a] h-[800px] w-[800px] opacity-40 absolute mt-52 " />
+            <div className="rounded-full  bg-[#ffffff] opacity-20  h-[650px] w-[650px] absolute mt-52 animate-ping" />
+            <div className="rounded-full  bg-[#a7d3ff] h-[800px] w-[800px] opacity-20 absolute mt-52 " />
             <div />
             
 
